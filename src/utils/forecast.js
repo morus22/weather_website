@@ -13,7 +13,7 @@ const forecast = (lat,long,callback) => {
         } else { 
             console.log(url)
             callback(undefined," Mamy teraz temperature: "+response.body.current.temperature+' stopni\nKierunek wiatru to:'   
-            +response.body.current.wind_dir+' Miejscowość: '+response.body.location.name +' '+response.body.location.country)
+            +response.body.current.wind_dir+' Miejscowość: '+response.body.location.name +' '+response.body.location.country +' Ćiśnienie:'+response.body.current.pressure)
              
     }
          
