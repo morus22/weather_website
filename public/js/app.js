@@ -10,8 +10,8 @@ const search = document.querySelector('input')
 weather_form.addEventListener('submit',(e)=>{
     e.preventDefault()
     paragraf_1.textContent='LOADING...'
-    const url =  'http://localhost:3000/weather?adress='+search.value 
- fetch(url).then((response) => {
+     
+ fetch('/weather?adress='+search.value ).then((response) => {
     response.json().then((data)=>{
         if (data.error){
             console.log('BLad '+data.error)
